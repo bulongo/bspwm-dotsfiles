@@ -1,0 +1,104 @@
+configuration {
+  display-drun:       "Applications:";
+  display-window:     "Windows:";
+  drun-display-format:"{name}";
+  font:               "JetBrainsMono Nerd Font Medium 10";
+  modi:               "window,run,drun";
+  show-icons:         true;
+  icon-theme:         "Paper";
+}
+
+@theme "/dev/null"
+
+* {
+  // bg:                #1e1e2e66;
+  // bg1:               #7E7E7E80;
+  // bg3:               #616161F2;
+  // fg0:               #DEDEDE;
+  // fg1:               #FFFFFF;
+
+
+
+  bg0:                  #242424E6;
+  bg1:                  #585b7066;
+  bg2:                  #0860f2E6;
+  bg3:                  #31324466;
+
+  fg0:                  #cdd6f4;
+  fg1:                  #7f849c;
+  fg2:                  #DEDEDE80;
+
+  background-color:     @bg1;
+  text-color:           @fg0;
+
+  border:               0;
+  margin:               0;
+  padding:              5;
+  spacing:              0;
+}
+
+window {
+  border:               1;
+  border-color:         @fg2;
+  width:                30%;
+  height:               400;
+  background-color:     @bg0;
+}
+
+element {
+  padding:              8 12;
+  background-color:     transparent;
+  text-color:           @fg1;
+}
+
+element selected {
+  text-color:           @fg0;
+  background-color:     @bg3;
+}
+
+element-text {
+  background-color:     transparent;
+  text-color:           inherit;
+  vertical-align:       0.5;
+}
+
+element-icon {
+  size:                 14;
+  padding:              0 10 0 0;
+  background-color:     transparent;
+}
+
+entry {
+  padding:              12;
+  background-color:     @bg1;
+  placeholder:          "search";
+  text-color:           @fg2;
+}
+
+inputbar {
+  children:             [prompt, entry];
+  background-color:     @bg0;
+}
+
+listview {
+  background-color:     @bg0;
+  border-color:         @bg1;
+  columns:              1;
+  lines:                10;
+}
+
+mainbox {
+  border-radius:        6;
+  children:             [inputbar, listview];
+  background-color:     transparent;
+}
+
+prompt {
+  enabled: true;
+  padding:              12 0 0 12;
+  background-color:     @bg1;
+  text-color:           @fg0;
+}
+
+/* vim: ft=sass
+
